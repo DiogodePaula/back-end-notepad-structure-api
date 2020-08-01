@@ -2,8 +2,12 @@ const sequelize = require('sequelize');
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('notepad', {
-      uid: { type: Sequelize.UUID, allowNull: false, primarykey: true },
+    await queryInterface.createTable('notes', {
+      uid: {
+        type: Sequelize.UUID,
+        allowNull: false,
+        primarykey: true,
+      },
       title: {
         type: Sequelize.STRING,
         allowNull: false,
@@ -24,7 +28,7 @@ module.exports = {
         type: Sequelize.DATE,
         allowNull: false,
       },
-      update_at: {
+      updated_at: {
         type: Sequelize.DATE,
         allowNull: false,
       },
@@ -32,6 +36,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('notepad');
+    await queryInterface.dropTable('notes');
   },
 };

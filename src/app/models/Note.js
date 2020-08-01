@@ -4,7 +4,7 @@ class Note extends Model {
   static init(sequelize) {
     super.init(
       {
-        udi: {
+        uid: {
           primarykey: true,
           allowNull: false,
           type: Sequelize.UUID,
@@ -31,6 +31,7 @@ class Note extends Model {
         sequelize,
       }
     );
+    this.removeAttribute('id');
     return this;
   }
 }
