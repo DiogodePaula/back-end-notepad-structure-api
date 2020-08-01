@@ -20,11 +20,11 @@ class Note extends Model {
         },
         date: {
           allowNull: false,
-          type: Sequelize.STRING,
+          type: Sequelize.DATE,
         },
         hour: {
           allowNull: false,
-          type: Sequelize.STRING,
+          type: Sequelize.TIME,
         },
       },
       {

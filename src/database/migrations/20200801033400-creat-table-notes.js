@@ -17,11 +17,11 @@ module.exports = {
         allowNull: false,
       },
       date: {
-        type: Sequelize.STRING,
+        type: Sequelize.DATE,
         allowNull: false,
       },
       hour: {
-        type: Sequelize.STRING,
+        type: Sequelize.TIME,
         allowNull: false,
       },
       created_at: {
